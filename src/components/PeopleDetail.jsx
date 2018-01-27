@@ -22,7 +22,7 @@ export default class PeopleDetail extends Component {
   }
   render() {
     return (
-      <div className="card mb-3 w-50 mx-auto my-3 justify-content-center">
+      <div className="card mb-3 w-25 mx-auto my-3 justify-content-center">
         <img className="card-img-top" src={image} alt="" />
         <div className="card-body p-3">
           <h5 className="card-title">{this.state.person.name}</h5>

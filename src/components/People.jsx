@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import image from "./assets/ghibli2.jpg";
+import { Link } from "react-router-dom";
 
 export default class People extends Component {
   render() {
@@ -12,10 +13,6 @@ export default class People extends Component {
           <img className="card-img-top w-100" src={image} alt="Card cap" />
           <div className="card-block">
             <h4 className="card-title">{people.name}</h4>
-            <p className="card-text">{people.gender}</p>
-            <p className="card-text">{people.age}</p>
-            <p className="card-text">{people.eye_color}</p>
-            <p className="card-text">{people.hair_color}</p>
             <a
               href={people.url}
               target="_blank"
@@ -23,6 +20,9 @@ export default class People extends Component {
             >
               JSON Link
             </a>
+            <Link to={`/people/${people.id}`} className="btn btn-primary ml-2">
+              Details
+            </Link>
           </div>
         </div>
       );
